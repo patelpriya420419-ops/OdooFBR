@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Top-level FBR Menu (web_icon points to static/description/icon.png) -->
+    <menuitem id="menu_fbr_root"
+              name="FBR Tax"
+              sequence="99"
+              />
+
+    <!-- Dashboard -->
+    <menuitem id="menu_fbr_dashboard"
+              name="Dashboard"
+              parent="menu_fbr_root"
+              action="action_fbr_tax_dashboard"
+              sequence="1"/>
+
+    <!-- Reports submenu -->
+    <menuitem id="menu_fbr_reports"
+              name="Reports"
+              parent="menu_fbr_root"
+              action="action_fbr_tax_report"
+              sequence="2"/>
+
+
+
+    <!-- Tools submenu -->
+    <menuitem id="menu_fbr_tools"
+              name="GST Calculator"
+              parent="menu_fbr_root"
+              action="action_fbr_gst_calculator"
+              sequence="3"/>
+
+
+
+</odoo>

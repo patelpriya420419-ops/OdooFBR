@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- FBR Dashboard Form View -->
+    <record id="view_fbr_tax_dashboard_form" model="ir.ui.view">
+        <field name="name">fbr.tax.dashboard.form</field>
+        <field name="model">fbr.tax.dashboard</field>
+        <field name="arch" type="xml">
+            <form string="FBR Sales Tax Dashboard" create="false" edit="false">
+                <sheet>
+                    <field name="currency_id" invisible="1"/>
+                        <div class="text-center mb-4">
+                            <h1 style="color:#1a5276; font-size:28px;">
+                               FBR Sales Tax Dashboard
+                            </h1>
+                            <p class="text-muted">
+                                Current Month Summary
+                                <strong><field name="month" readonly="1"/></strong>
+                            </p>
+                        </div>
+
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card border-primary mb-3">
+                                <div class="card-header bg-primary text-white text-center">
+                                    <strong>📊 Total Sales (Taxable)</strong>
+                                </div>
+                                <div class="card-body text-center">
+                                    <h3 class="text-primary">
+                                        <field name="total_sales" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                                    </h3>
+                                    <small class="text-muted">This Month</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card border-warning mb-3">
+                                <div class="card-header bg-warning text-white text-center">
+                                    <strong>🛒 Total Purchases (Taxable)</strong>
+                                </div>
+                                <div class="card-body text-center">
+                                    <h3 class="text-warning">
+                                        <field name="total_purchases" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                                    </h3>
+                                    <small class="text-muted">This Month</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card border-danger mb-3">
+                                <div class="card-header bg-danger text-white text-center">
+                                    <strong>💰 Net GST Payable</strong>
+                                </div>
+                                <div class="card-body text-center">
+                                    <h3 class="text-danger">
+                                        <field name="net_tax_payable" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="col-md-6">
+                            <div class="card border-success mb-3">
+                                <div class="card-header bg-success text-white">
+                                    <strong>⬆ Output Tax </strong>
+                                </div>
+                                <div class="card-body">
+                                    <h4 class="text-success">
+                                        <field name="output_tax" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card border-info mb-3">
+                                <div class="card-header bg-info text-white">
+                                    <strong>⬇ Input Tax </strong>
+                                </div>
+                                <div class="card-body">
+                                    <h4 class="text-info">
+                                        <field name="input_tax" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- FBR Tax Report Wizard View -->
+    <record id="view_fbr_tax_report_form" model="ir.ui.view">
+        <field name="name">fbr.tax.report.form</field>
+        <field name="model">fbr.tax.report</field>
+        <field name="arch" type="xml">
+            <form string="FBR Tax Report">
+                <sheet>
+                    <group string="Report Period">
+                        <group>
+                            <field name="date_from"/>
+                            <field name="date_to"/>
+                            <field name="company_id"/>
+                        </group>
+                        <group string="Summary">
+                            <field name="total_sales" widget="monetary"/>
+                            <field name="output_tax" widget="monetary"/>
+                            <field name="total_purchases" widget="monetary"/>
+                            <field name="input_tax" widget="monetary"/>
+                            <field name="net_tax_payable" widget="monetary"/>
+                        </group>
+                    </group>
+                </sheet>
+                <footer>
+                    <button string="Sales Register (PDF)" name="action_print_sales_register"
+                            type="object" class="btn-primary"/>
+                    <button string="Purchase Register (PDF)" name="action_print_purchase_register"
+                            type="object" class="btn-primary"/>
+                    <button string="Monthly Return (PDF)" name="action_print_monthly_return"
+                            type="object" class="btn-success"/>
+                    <button string="Export XLSX" name="action_export_xlsx"
+                            type="object" class="btn-warning"/>
+                    <button string="Close" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action for Dashboard -->
+    <record id="action_fbr_tax_dashboard" model="ir.actions.act_window">
+        <field name="name">FBR Tax Dashboard</field>
+        <field name="res_model">fbr.tax.dashboard</field>
+        <field name="view_mode">form</field>
+        <field name="res_id" ref="fbr_tax_dashboard_main"/>
+        <field name="target">current</field>
+    </record>
+
+    <!-- Action for Tax Report -->
+    <record id="action_fbr_tax_report" model="ir.actions.act_window">
+        <field name="name">FBR Tax Report</field>
+        <field name="res_model">fbr.tax.report</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+</odoo>

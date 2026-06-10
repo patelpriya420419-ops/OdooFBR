@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_fbr_gst_calculator_form" model="ir.ui.view">
+        <field name="name">fbr.gst.calculator.form</field>
+        <field name="model">fbr.gst.calculator</field>
+        <field name="arch" type="xml">
+            <form string="GST Calculator">
+                <sheet>
+                    <div class="text-center mb-3">
+                        <h3 style="color:#1a5276;">FBR GST Calculator</h3>
+                    </div>
+                    <group string="Input">
+                        <field name="calc_mode" widget="radio"/>
+                        <field name="input_amount"/>
+                        <field name="gst_rate"/>
+                    </group>
+                    <group string="Result">
+                        <field name="taxable_amount" widget="monetary" readonly="1"/>
+                        <field name="gst_amount" widget="monetary" readonly="1"/>
+                        <field name="total_amount" widget="monetary" readonly="1"/>
+                    </group>
+                </sheet>
+                <footer>
+                    <button string="Close" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_fbr_gst_calculator" model="ir.actions.act_window">
+        <field name="name">GST Calculator</field>
+        <field name="res_model">fbr.gst.calculator</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+</odoo>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="report_fbr_sales_register_template">
+        <t t-call="web.html_container">
+           <t t-foreach="docs" t-as="doc">
+                <div class="page">
+                    <style>
+                        .fbr-header { background: #1a5276; color: white; padding: 15px; text-align: center; border-radius: 5px; margin-bottom: 20px; }
+                        .fbr-meta { margin-bottom: 15px; }
+                        .fbr-table { width: 100%; border-collapse: collapse; font-size: 11px; }
+                        .fbr-table th { background: #2e86c1; color: white; padding: 8px; text-align: center; border: 1px solid #ddd; }
+                        .fbr-table td { padding: 6px 8px; border: 1px solid #ddd; }
+                        .fbr-table tr:nth-child(even) { background: #f2f8fe; }
+                        .fbr-table .total-row { background: #d5e8d4; font-weight: bold; }
+                        .text-right { text-align: right; }
+                        .text-center { text-align: center; }
+                    </style>
+
+                    <div class="fbr-header">
+                        <h2>FBR SALES REGISTER</h2>
+                    </div>
+
+                    <div class="fbr-meta row">
+                        <div class="col-6">
+                            <strong>Company:</strong> <t t-esc="doc.company_id.name"/><br/>
+                            <strong>Period:</strong>
+                            <t t-esc="doc.date_from"/> to <t t-esc="doc.date_to"/>
+                        </div>
+                        <div class="col-6 text-right">
+                            <strong>Generated:</strong> <t t-esc="context_timestamp(datetime.datetime.now()).strftime('%d-%m-%Y %H:%M')"/>
+                        </div>
+                    </div>
+
+                    <table class="fbr-table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Date</th>
+                                <th>Invoice No</th>
+                                <th>Customer</th>
+                                <th>Description</th>
+                                <th class="text-right">Taxable Amount</th>
+                                <th class="text-right">GST 18%</th>
+                                <th class="text-right">Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <t t-set="rows" t-value="doc._get_sales_data()"/>
+                            <t t-set="sr" t-value="1"/>
+                            <t t-foreach="rows" t-as="row">
+                                <tr>
+                                    <td class="text-center"><t t-esc="sr"/><t t-set="sr" t-value="sr+1"/></td>
+                                    <td><t t-esc="row['date']"/></td>
+                                    <td><t t-esc="row['invoice_no']"/></td>
+                                    <td><t t-esc="row['customer']"/></td>
+                                    <td><t t-esc="row['description']"/></td>
+                                    <td class="text-right"><t t-esc="'{:,.2f}'.format(row['taxable_amount'])"/></td>
+                                    <td class="text-right"><t t-esc="'{:,.2f}'.format(row['gst_amount'])"/></td>
+                                    <td class="text-right"><t t-esc="'{:,.2f}'.format(row['total'])"/></td>
+                                </tr>
+                            </t>
+                            <tr class="total-row">
+                                <td colspan="5" class="text-right">TOTAL</td>
+                                <td class="text-right">
+                                    <t t-esc="'{:,.2f}'.format(sum(r['taxable_amount'] for r in rows))"/>
+                                </td>
+                                <td class="text-right">
+                                    <t t-esc="'{:,.2f}'.format(sum(r['gst_amount'] for r in rows))"/>
+                                </td>
+                                <td class="text-right">
+                                    <t t-esc="'{:,.2f}'.format(sum(r['total'] for r in rows))"/>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+           </t>
+        </t>
+    </template>
+
+    <record id="action_report_fbr_sales_register" model="ir.actions.report">
+        <field name="name">FBR Sales Register</field>
+        <field name="model">fbr.tax.report</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">fbr_sales_tax.report_fbr_sales_register_template</field>
+        <field name="report_file">fbr_sales_tax.report_fbr_sales_register_template</field>
+        <field name="print_report_name">'FBR_Sales_Register_%s_%s' % (object.date_from, object.date_to)</field>
+    </record>
+
+</odoo>
