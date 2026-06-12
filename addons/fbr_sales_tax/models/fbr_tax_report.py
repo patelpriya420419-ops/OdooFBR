@@ -21,6 +21,10 @@ class FbrTaxReport(models.TransientModel):
                           default=fields.Date.today)
     company_id = fields.Many2one('res.company', string='Company',
                                  default=lambda self: self.env.company)
+    report_lang = fields.Selection([
+        ('en_US', 'English'),
+        ('ur', 'Urdu (اردو)'),
+    ], string='Report Language', default='en_US', help='Select the language for your report')
 
     # Computed summary fields
     total_sales = fields.Float(string='Total Sales', compute='_compute_totals')

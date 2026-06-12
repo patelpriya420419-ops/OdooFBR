@@ -1,5 +1,5 @@
 {
-    'name': 'FBR Sales Tax',
+    'name': 'FBR Sales Taxs',
     'version': '19.0.1.0.0',
     'category': 'Accounting/Localizations',
     'summary': 'Sales Register, Purchase Register, Monthly Tax Return & Dashboard',

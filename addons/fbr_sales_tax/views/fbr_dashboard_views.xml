@@ -97,13 +97,14 @@
         <field name="model">fbr.tax.report</field>
         <field name="arch" type="xml">
             <form string="FBR Tax Report">
-                <sheet>
-                    <group string="Report Period">
-                        <group>
-                            <field name="date_from"/>
-                            <field name="date_to"/>
-                            <field name="company_id"/>
-                        </group>
+                 <sheet>
+                     <group string="Report Period">
+                         <group>
+                             <field name="date_from"/>
+                             <field name="date_to"/>
+                             <field name="company_id"/>
+                             <field name="report_lang"/>
+                         </group>
                         <group string="Summary">
                             <field name="total_sales" widget="monetary"/>
                             <field name="output_tax" widget="monetary"/>
