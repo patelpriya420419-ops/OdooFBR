@@ -1,0 +1,481 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* fbr_sales_tax
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-12 04:50+0000\n"
+"PO-Revision-Date: 2026-06-12 04:50+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: fbr_sales_tax
+#: model:ir.actions.report,print_report_name:fbr_sales_tax.action_report_fbr_monthly_return
+msgid "'FBR_Monthly_Return_%s_%s' % (object.date_from, object.date_to)"
+msgstr "'ایف بی آر_ماہانہ_ریٹرن_%s_%s' % (object.date_from, object.date_to)"
+
+#. module: fbr_sales_tax
+#: model:ir.actions.report,print_report_name:fbr_sales_tax.action_report_fbr_purchase_register
+msgid "'FBR_Purchase_Register_%s_%s' % (object.date_from, object.date_to)"
+msgstr "'ایف بی آر_خریداری_رجسٹر_%s_%s' % (object.date_from, object.date_to)"
+
+#. module: fbr_sales_tax
+#: model:ir.actions.report,print_report_name:fbr_sales_tax.action_report_fbr_sales_register
+msgid "'FBR_Sales_Register_%s_%s' % (object.date_from, object.date_to)"
+msgstr "'ایف بی آر_سیلز_رجسٹر_%s_%s' % (object.date_from, object.date_to)"
+
+#. module: fbr_sales_tax
+#: model_terms:ir.ui.view,arch_db:fbr_sales_tax.report_fbr_purchase_register_template
+#: model_terms:ir.ui.view,arch_db:fbr_sales_tax.report_fbr_sales_register_template
+msgid "<br/>\n"
+"                            <strong>Period:</strong>"
+msgstr "<br/>\n"
+"                            <strong>مدت:</strong>"
+
+#. module: fbr_sales_tax
+#: model_terms:ir.ui.view,arch_db:fbr_sales_tax.view_fbr_tax_dashboard_form
+msgid "<small class=\"text-muted\">This Month</small>"
+msgstr ""
+
+#. module: fbr_sales_tax
+#: model_terms:ir.ui.view,arch_db:fbr_sales_tax.report_fbr_monthly_return_template
+msgid "<strong>A. Output Tax</strong><br/>"
+msgstr "<strong>الف۔ آؤٹ پٹ ٹیکس</strong><br/>"
+
+#. module: fbr_sales_tax
+#: model_terms:ir.ui.view,arch_db:fbr_sales_tax.report_fbr_monthly_return_template
+msgid "<strong>B. Input Tax</strong><br/>"
+msgstr "<strong>بی۔ ان پٹ ٹیکس</strong><br/>"
+
+#. module: fbr_sales_tax
+#: model_terms:ir.ui.view,arch_db:fbr_sales_tax.report_fbr_purchase_register_template
+#: model_terms:ir.ui.view,arch_db:fbr_sales_tax.report_fbr_sales_register_template
+msgid "<strong>Company:</strong>"
+msgstr "<strong>کمپنی:</strong>"
+
+#. module: fbr_sales_tax
+#: model_terms:ir.ui.view,arch_db:fbr_sales_tax.report_fbr_purchase_register_template
+#: model_terms:ir.ui.view,arch_db:fbr_sales_tax.report_fbr_sales_register_template
+msgid "<strong>Generated:</strong>"
+msgstr "<strong>تیار کردہ:</strong>"
+
+#. module: fbr_sales_tax
+#: model_terms:ir.ui.view,arch_db:fbr_sales_tax.view_fbr_tax_dashboard_form
+msgid "<strong>⬆ Output Tax </strong>"
+msgstr ""
+
+#. module: fbr_sales_tax
+#: model_terms:ir.ui.view,arch_db:fbr_sales_tax.view_fbr_tax_dashboard_form
+msgid "<strong>⬇ Input Tax </strong>"
+msgstr ""
+
+#. module: fbr_sales_tax
+#: model_terms:ir.ui.view,arch_db:fbr_sales_tax.view_fbr_tax_dashboard_form
+msgid "<strong>💰 Net GST Payable</strong>"
+msgstr ""
+
+#. module: fbr_sales_tax
+#: model_terms:ir.ui.view,arch_db:fbr_sales_tax.view_fbr_tax_dashboard_form
+msgid "<strong>📊 Total Sales (Taxable)</strong>"
+msgstr ""
+
+#. module: fbr_sales_tax
+#: model_terms:ir.ui.view,arch_db:fbr_sales_tax.view_fbr_tax_dashboard_form
+msgid "<strong>🛒 Total Purchases (Taxable)</strong>"
+msgstr ""
+
+#. module: fbr_sales_tax
+#: model_terms:ir.ui.view,arch_db:fbr_sales_tax.report_fbr_monthly_return_template
+msgid "Amount (PKR)"
+msgstr "رقم (PKR)"
+
+#. module: fbr_sales_tax
+#: model:ir.model.fields.selection,name:fbr_sales_tax.selection__fbr_gst_calculator__calc_mode__exclusive
+msgid "Amount Excluding GST → Calculate GST"
+msgstr ""
+
+#. module: fbr_sales_tax
+#: model:ir.model.fields.selection,name:fbr_sales_tax.selection__fbr_gst_calculator__calc_mode__inclusive
+msgid "Amount Including GST → Extract GST"
+msgstr ""
+
+#. module: fbr_sales_tax
+#: model:ir.model.fields,field_description:fbr_sales_tax.field_fbr_gst_calculator__calc_mode
+msgid "Calculation Mode"
+msgstr ""
+
+#. module: fbr_sales_tax
+#: model_terms:ir.ui.view,arch_db:fbr_sales_tax.view_fbr_gst_calculator_form
+#: model_terms:ir.ui.view,arch_db:fbr_sales_tax.view_fbr_tax_report_form
+msgid "Close"
+msgstr ""
+
+#. module: fbr_sales_tax
+#: model:ir.model.fields,field_description:fbr_sales_tax.field_fbr_tax_dashboard__company_id
+#: model:ir.model.fields,field_description:fbr_sales_tax.field_fbr_tax_report__company_id
+msgid "Company"
+msgstr ""
+
+#. module: fbr_sales_tax
+#: model:ir.model.fields,field_description:fbr_sales_tax.field_fbr_gst_calculator__create_uid
+#: model:ir.model.fields,field_description:fbr_sales_tax.field_fbr_tax_dashboard__create_uid
+#: model:ir.model.fields,field_description:fbr_sales_tax.field_fbr_tax_report__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: fbr_sales_tax
+#: model:ir.model.fields,field_description:fbr_sales_tax.field_fbr_gst_calculator__create_date
+#: model:ir.model.fields,field_description:fbr_sales_tax.field_fbr_tax_dashboard__create_date
+#: model:ir.model.fields,field_description:fbr_sales_tax.field_fbr_tax_report__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: fbr_sales_tax
+#: model:ir.model.fields,field_description:fbr_sales_tax.field_fbr_tax_dashboard__currency_id
+msgid "Currency"
+msgstr ""
+
+#. module: fbr_sales_tax
+#: model_terms:ir.ui.view,arch_db:fbr_sales_tax.view_fbr_tax_dashboard_form
+msgid "Current Month Summary"
+msgstr ""
+
+#. module: fbr_sales_tax
+#: model_terms:ir.ui.view,arch_db:fbr_sales_tax.report_fbr_sales_register_template
+msgid "Customer"
+msgstr ""
+
+#. module: fbr_sales_tax
+#: model_terms:ir.ui.view,arch_db:fbr_sales_tax.report_fbr_sales_register_template
+msgid "Customer"
+msgstr "خریدار"
+
+#. module: fbr_sales_tax
+#: model_terms:ir.ui.view,arch_db:fbr_sales_tax.report_fbr_purchase_register_template
+#: model_terms:ir.ui.view,arch_db:fbr_sales_tax.report_fbr_sales_register_template
+msgid "Date"
+msgstr "تاریخ"
+
+#. module: fbr_sales_tax
+#: model_terms:ir.ui.view,arch_db:fbr_sales_tax.report_fbr_sales_register_template
+msgid "Description"
+msgstr "تفصیل"
+
+#. module: fbr_sales_tax
+#: model:ir.model.fields,field_description:fbr_sales_tax.field_fbr_tax_report__date_to
+msgid "Date To"
+msgstr ""
+
+#. module: fbr_sales_tax
+#: model_terms:ir.ui.view,arch_db:fbr_sales_tax.report_fbr_sales_register_template
+msgid "Description"
+msgstr ""
+
+#. module: fbr_sales_tax
+#: model:ir.model.fields,field_description:fbr_sales_tax.field_fbr_gst_calculator__display_name
+#: model:ir.model.fields,field_description:fbr_sales_tax.field_fbr_tax_dashboard__display_name
+#: model:ir.model.fields,field_description:fbr_sales_tax.field_fbr_tax_report__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: fbr_sales_tax
+#: model:ir.model.fields.selection,name:fbr_sales_tax.selection__fbr_tax_report__report_lang__en_us
+msgid "English"
+msgstr ""
+
+#. module: fbr_sales_tax
+#: model:ir.model.fields,field_description:fbr_sales_tax.field_fbr_gst_calculator__input_amount
+msgid "Enter Amount"
+msgstr ""
+
+#. module: fbr_sales_tax
+#: model_terms:ir.ui.view,arch_db:fbr_sales_tax.view_fbr_tax_report_form
+msgid "Export XLSX"
+msgstr ""
+
+#. module: fbr_sales_tax
+#: model:account.tax.group,name:fbr_sales_tax.tax_group_fbr_gst
+msgid "FBR GST (Pakistan)"
+msgstr ""
+
+#. module: fbr_sales_tax
+#: model:ir.model,name:fbr_sales_tax.model_fbr_gst_calculator
+#: model_terms:ir.ui.view,arch_db:fbr_sales_tax.view_fbr_gst_calculator_form
+msgid "FBR GST Calculator"
+msgstr ""
+
+#. module: fbr_sales_tax
+#: model:ir.actions.report,name:fbr_sales_tax.action_report_fbr_monthly_return
+msgid "FBR Monthly Tax Return"
+msgstr ""
+
+#. module: fbr_sales_tax
+#: model_terms:ir.ui.view,arch_db:fbr_sales_tax.report_fbr_purchase_register_template
+msgid "FBR PURCHASE REGISTER"
+msgstr "ایف بی آر خریداری رجسٹر"
+
+#. module: fbr_sales_tax
+#: model:ir.actions.report,name:fbr_sales_tax.action_report_fbr_purchase_register
+msgid "FBR Purchase Register"
+msgstr "ایف بی آر خریداری رجسٹر"
+
+#. module: fbr_sales_tax
+#: model_terms:ir.ui.view,arch_db:fbr_sales_tax.report_fbr_sales_register_template
+msgid "FBR SALES REGISTER"
+msgstr "ایف بی آر سیلز رجسٹر"
+
+#. module: fbr_sales_tax
+#: model:ir.actions.report,name:fbr_sales_tax.action_report_fbr_sales_register
+msgid "FBR Sales Register"
+msgstr "ایف بی آر سیلز رجسٹر"
+
+#. module: fbr_sales_tax
+#: model_terms:ir.ui.view,arch_db:fbr_sales_tax.view_fbr_tax_dashboard_form
+msgid "FBR Sales Tax Dashboard"
+msgstr ""
+
+#. module: fbr_sales_tax
+#: model:ir.model,name:fbr_sales_tax.model_fbr_tax_report
+msgid "FBR Sales Tax Report"
+msgstr ""
+
+#. module: fbr_sales_tax
+#: model:ir.ui.menu,name:fbr_sales_tax.menu_fbr_root
+msgid "FBR Tax"
+msgstr ""
+
+#. module: fbr_sales_tax
+#: model:ir.actions.act_window,name:fbr_sales_tax.action_fbr_tax_dashboard
+#: model:ir.model,name:fbr_sales_tax.model_fbr_tax_dashboard
+msgid "FBR Tax Dashboard"
+msgstr ""
+
+#. module: fbr_sales_tax
+#: model:ir.actions.act_window,name:fbr_sales_tax.action_fbr_tax_report
+#: model_terms:ir.ui.view,arch_db:fbr_sales_tax.view_fbr_tax_report_form
+msgid "FBR Tax Report"
+msgstr ""
+
+#. module: fbr_sales_tax
+#: model:account.tax,name:fbr_sales_tax.tax_gst_18_sale
+msgid "GST 18% (Output)"
+msgstr ""
+
+#. module: fbr_sales_tax
+#: model:ir.model.fields,field_description:fbr_sales_tax.field_fbr_gst_calculator__gst_amount
+msgid "GST Amount"
+msgstr ""
+
+#. module: fbr_sales_tax
+#: model:ir.actions.act_window,name:fbr_sales_tax.action_fbr_gst_calculator
+#: model:ir.ui.menu,name:fbr_sales_tax.menu_fbr_tools
+#: model_terms:ir.ui.view,arch_db:fbr_sales_tax.view_fbr_gst_calculator_form
+msgid "GST Calculator"
+msgstr ""
+
+#. module: fbr_sales_tax
+#: model:ir.model.fields,field_description:fbr_sales_tax.field_fbr_gst_calculator__gst_rate
+msgid "GST Rate (%)"
+msgstr ""
+
+#. module: fbr_sales_tax
+#: model_terms:account.tax,description:fbr_sales_tax.tax_gst_18_sale
+msgid "GST@18%"
+msgstr ""
+
+#. module: fbr_sales_tax
+#: model:ir.model.fields,field_description:fbr_sales_tax.field_fbr_gst_calculator__id
+#: model:ir.model.fields,field_description:fbr_sales_tax.field_fbr_tax_dashboard__id
+#: model:ir.model.fields,field_description:fbr_sales_tax.field_fbr_tax_report__id
+msgid "ID"
+msgstr ""
+
+#. module: fbr_sales_tax
+#: model_terms:ir.ui.view,arch_db:fbr_sales_tax.view_fbr_gst_calculator_form
+msgid "Input"
+msgstr ""
+
+#. module: fbr_sales_tax
+#: model_terms:ir.ui.view,arch_db:fbr_sales_tax.report_fbr_purchase_register_template
+msgid "Input GST 18%"
+msgstr "ان پٹ جی ایس ٹی 18 فیصد"
+
+#. module: fbr_sales_tax
+#: model:ir.model.fields,field_description:fbr_sales_tax.field_fbr_tax_dashboard__input_tax
+#: model:ir.model.fields,field_description:fbr_sales_tax.field_fbr_tax_report__input_tax
+msgid "Input Tax"
+msgstr ""
+
+#. module: fbr_sales_tax
+#: model_terms:ir.ui.view,arch_db:fbr_sales_tax.report_fbr_purchase_register_template
+#: model_terms:ir.ui.view,arch_db:fbr_sales_tax.report_fbr_sales_register_template
+msgid "Invoice No"
+msgstr "انوائس نمبر"
+
+#. module: fbr_sales_tax
+#: model:ir.model.fields,field_description:fbr_sales_tax.field_fbr_gst_calculator__write_uid
+#: model:ir.model.fields,field_description:fbr_sales_tax.field_fbr_tax_dashboard__write_uid
+#: model:ir.model.fields,field_description:fbr_sales_tax.field_fbr_tax_report__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: fbr_sales_tax
+#: model:ir.model.fields,field_description:fbr_sales_tax.field_fbr_gst_calculator__write_date
+#: model:ir.model.fields,field_description:fbr_sales_tax.field_fbr_tax_dashboard__write_date
+#: model:ir.model.fields,field_description:fbr_sales_tax.field_fbr_tax_report__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: fbr_sales_tax
+#: model_terms:ir.ui.view,arch_db:fbr_sales_tax.report_fbr_monthly_return_template
+msgid "MONTHLY SALES TAX RETURN"
+msgstr "ماہانہ سیلز ٹیکس ریٹرن"
+
+#. module: fbr_sales_tax
+#: model:ir.model.fields,field_description:fbr_sales_tax.field_fbr_tax_dashboard__month
+msgid "Month"
+msgstr ""
+
+#. module: fbr_sales_tax
+#: model_terms:ir.ui.view,arch_db:fbr_sales_tax.view_fbr_tax_report_form
+msgid "Monthly Return (PDF)"
+msgstr ""
+
+#. module: fbr_sales_tax
+#: model_terms:ir.ui.view,arch_db:fbr_sales_tax.report_fbr_monthly_return_template
+msgid "NET TAX PAYABLE<br/>"
+msgstr "نیٹ ٹیکس ادا کرنا<br/>"
+
+#. module: fbr_sales_tax
+#: model:ir.model.fields,field_description:fbr_sales_tax.field_fbr_tax_dashboard__name
+msgid "Name"
+msgstr ""
+
+#. module: fbr_sales_tax
+#: model:ir.model.fields,field_description:fbr_sales_tax.field_fbr_tax_dashboard__net_tax_payable
+msgid "Net GST Payable"
+msgstr ""
+
+#. module: fbr_sales_tax
+#: model:ir.model.fields,field_description:fbr_sales_tax.field_fbr_tax_report__net_tax_payable
+msgid "Net Tax Payable"
+msgstr ""
+
+#. module: fbr_sales_tax
+#: model_terms:ir.ui.view,arch_db:fbr_sales_tax.report_fbr_sales_register_template
+msgid "Output GST 18%"
+msgstr "آؤٹ پٹ جی ایس ٹی 18 فیصد"
+
+#. module: fbr_sales_tax
+#: model:ir.model.fields,field_description:fbr_sales_tax.field_fbr_tax_dashboard__output_tax
+#: model:ir.model.fields,field_description:fbr_sales_tax.field_fbr_tax_report__output_tax
+msgid "Output Tax"
+msgstr ""
+
+#. module: fbr_sales_tax
+#: model_terms:ir.ui.view,arch_db:fbr_sales_tax.report_fbr_monthly_return_template
+msgid "Particulars"
+msgstr "تفصیلات"
+
+#. module: fbr_sales_tax
+#: model_terms:ir.ui.view,arch_db:fbr_sales_tax.view_fbr_tax_report_form
+msgid "Purchase Register (PDF)"
+msgstr ""
+
+#. module: fbr_sales_tax
+#: model:ir.model.fields,field_description:fbr_sales_tax.field_fbr_tax_report__report_lang
+msgid "Report Language"
+msgstr ""
+
+#. module: fbr_sales_tax
+#: model_terms:ir.ui.view,arch_db:fbr_sales_tax.view_fbr_tax_report_form
+msgid "Report Period"
+msgstr ""
+
+#. module: fbr_sales_tax
+#: model:ir.ui.menu,name:fbr_sales_tax.menu_fbr_reports
+msgid "Reports"
+msgstr ""
+
+#. module: fbr_sales_tax
+#: model_terms:ir.ui.view,arch_db:fbr_sales_tax.view_fbr_gst_calculator_form
+msgid "Result"
+msgstr ""
+
+#. module: fbr_sales_tax
+#: model_terms:ir.ui.view,arch_db:fbr_sales_tax.report_fbr_monthly_return_template
+msgid "SALES TAX RETURN SUMMARY"
+msgstr "سیلز ٹیکس ریٹرن سمری"
+
+#. module: fbr_sales_tax
+#: model_terms:ir.ui.view,arch_db:fbr_sales_tax.view_fbr_tax_report_form
+msgid "Sales Register (PDF)"
+msgstr ""
+
+#. module: fbr_sales_tax
+#: model:ir.model.fields,help:fbr_sales_tax.field_fbr_tax_report__report_lang
+msgid "Select the language for your report"
+msgstr ""
+
+#. module: fbr_sales_tax
+#: model_terms:ir.ui.view,arch_db:fbr_sales_tax.view_fbr_tax_report_form
+msgid "Summary"
+msgstr ""
+
+#. module: fbr_sales_tax
+#: model_terms:ir.ui.view,arch_db:fbr_sales_tax.report_fbr_purchase_register_template
+msgid "Supplier"
+msgstr "سپلائی کار"
+
+#. module: fbr_sales_tax
+#: model_terms:ir.ui.view,arch_db:fbr_sales_tax.report_fbr_purchase_register_template
+#: model_terms:ir.ui.view,arch_db:fbr_sales_tax.report_fbr_sales_register_template
+msgid "TOTAL"
+msgstr "کل"
+
+#. module: fbr_sales_tax
+#: model:ir.model.fields,field_description:fbr_sales_tax.field_fbr_gst_calculator__taxable_amount
+#: model_terms:ir.ui.view,arch_db:fbr_sales_tax.report_fbr_purchase_register_template
+#: model_terms:ir.ui.view,arch_db:fbr_sales_tax.report_fbr_sales_register_template
+msgid "Taxable Amount"
+msgstr "قابل ٹیکس رقم"
+
+#. module: fbr_sales_tax
+#: model_terms:ir.ui.view,arch_db:fbr_sales_tax.report_fbr_purchase_register_template
+#: model_terms:ir.ui.view,arch_db:fbr_sales_tax.report_fbr_sales_register_template
+msgid "Total"
+msgstr "کل"
+
+#. module: fbr_sales_tax
+#: model:ir.model.fields,field_description:fbr_sales_tax.field_fbr_gst_calculator__total_amount
+msgid "Total Amount (Incl. GST)"
+msgstr ""
+
+#. module: fbr_sales_tax
+#: model:ir.model.fields,field_description:fbr_sales_tax.field_fbr_tax_dashboard__total_purchases
+#: model:ir.model.fields,field_description:fbr_sales_tax.field_fbr_tax_report__total_purchases
+msgid "Total Purchases"
+msgstr ""
+
+#. module: fbr_sales_tax
+#: model:ir.model.fields,field_description:fbr_sales_tax.field_fbr_tax_dashboard__total_sales
+#: model:ir.model.fields,field_description:fbr_sales_tax.field_fbr_tax_report__total_sales
+msgid "Total Sales"
+msgstr ""
+
+#. module: fbr_sales_tax
+#: model:ir.model.fields.selection,name:fbr_sales_tax.selection__fbr_tax_report__report_lang__ur
+msgid "Urdu (اردو)"
+msgstr ""
+
+#. module: fbr_sales_tax
+#: model_terms:ir.ui.view,arch_db:fbr_sales_tax.report_fbr_purchase_register_template
+#: model_terms:ir.ui.view,arch_db:fbr_sales_tax.report_fbr_sales_register_template
+msgid "to"
+msgstr "تا"

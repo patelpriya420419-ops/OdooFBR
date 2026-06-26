@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="vat_report_template">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+
+                <div class="page">
+
+                    <style>
+                        .vat-header {
+                            background: #1a5276;
+                            color: white;
+                            text-align: center;
+                            padding: 15px;
+                            border-radius: 5px;
+                            margin-bottom: 20px;
+                        }
+
+                        .vat-title {
+                            font-size: 24px;
+                            font-weight: bold;
+                        }
+
+                        .vat-subtitle {
+                            font-size: 12px;
+                        }
+
+                        .summary-box {
+                            border: 1px solid #d6dbdf;
+                            padding: 12px;
+                            margin-bottom: 20px;
+                            border-radius: 5px;
+                            background: #f8f9f9;
+                        }
+
+                        .vat-table {
+                            width: 100%;
+                            border-collapse: collapse;
+                            margin-top: 10px;
+                        }
+
+                        .vat-table th {
+                            background: #1a5276;
+                            color: white;
+                            padding: 10px;
+                            border: 1px solid #ddd;
+                            text-align: center;
+                        }
+
+                        .vat-table td {
+                            padding: 8px;
+                            border: 1px solid #ddd;
+                            text-align: right;
+                        }
+
+                        .formula-box {
+                            margin-top: 20px;
+                            border: 1px solid #d6dbdf;
+                            padding: 12px;
+                            border-radius: 5px;
+                            background: #fcfcfc;
+                        }
+
+                        .example-box {
+                            margin-top: 20px;
+                            border-left: 5px solid #1a5276;
+                            padding: 10px;
+                            background: #eef5fb;
+                        }
+                    </style>
+
+                    <!-- Header -->
+                    <div class="vat-header">
+                        <div class="vat-title">
+                            Saudi Arabia VAT (15%) Calculation Report
+                        </div>
+                        <div class="vat-subtitle">
+                            VAT Calculation Reference Report
+                        </div>
+                    </div>
+
+                    <!-- Summary -->
+                    <div class="summary-box">
+                        <strong>Amount (SAR):</strong>
+                        <span t-esc="'{:,.2f}'.format(doc.amount)"/>
+
+                        <br/>
+
+                        <strong>VAT @ 15%:</strong>
+                        <span t-esc="'{:,.2f}'.format(doc.amount * 0.15)"/>
+
+                        <br/>
+
+                        <strong>Total Including VAT:</strong>
+                        <span t-esc="'{:,.2f}'.format(doc.amount * 1.15)"/>
+                    </div>
+
+                    <!-- Calculation Table -->
+                    <table class="vat-table">
+                        <thead>
+                            <tr>
+                                <th>Amount (SAR)</th>
+                                <th>VAT @15%</th>
+                                <th>Total Including VAT</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span t-esc="'{:,.2f}'.format(doc.amount)"/>
+                                </td>
+                                <td>
+                                    <span t-esc="'{:,.2f}'.format(doc.amount * 0.15)"/>
+                                </td>
+                                <td>
+                                    <span t-esc="'{:,.2f}'.format(doc.amount * 1.15)"/>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </t>
+        </t>
+    </template>
+
+</odoo>
